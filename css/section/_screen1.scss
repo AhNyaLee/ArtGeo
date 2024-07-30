@@ -1,4 +1,4 @@
-.screen1 {
+.hero {
 
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
   background-repeat: no-repeat;
@@ -62,11 +62,11 @@
     opacity: 0.7;
   }
 
-  &__block1 {
+  &__block-text {
     margin-top: 92px;
   }
 
-  &__block1 h1 {
+  &__block-text h1 {
     margin-bottom: 27px;
   }
 
@@ -77,11 +77,11 @@
     justify-content: flex-start;
   }
 
-  &__block2 {
+  &__block-img {
     height: 954px;
   }
 
-  &__block2 img {
+  &__block-img img {
     height: 100%;
     width: 100%;
   }
@@ -96,7 +96,7 @@
       grid-template-columns: 4fr 2fr;
     }
 
-    &__block2 {
+    &__block-img {
       height: 658px;
     }
   }
@@ -107,7 +107,7 @@
       grid-template-columns: 1fr;
     }
 
-    &__block2 {
+    &__block-img {
       height: 658px;
       margin-left: 250px;
     }
@@ -144,7 +144,7 @@
 
 
 
-    &__block2 {
+    &__block-img {
       height: 420px;
       grid-column: 1;
       margin: 0;
