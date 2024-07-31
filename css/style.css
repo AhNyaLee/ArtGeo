@@ -385,6 +385,10 @@ input[type=radio].visually-hidden {
   opacity: 0.15;
   position: absolute;
 }
+.header__button {
+  display: none;
+  overflow: hidden;
+}
 @media (max-width: 1379px) {
   .header__grid {
     gap: 48px;
@@ -410,10 +414,25 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 1023px) {
+  .header__grid {
+    grid-template-columns: auto 1fr;
+    gap: 100px;
+    justify-content: flex-end;
+  }
   .header__menu {
-    width: 550px;
-    height: 20px;
-    gap: 20px;
+    display: none;
+    overflow: hidden;
+  }
+  .header__contacts {
+    width: 349px;
+    height: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 14px;
+  }
+  .header__button {
+    display: block;
+    overflow: visible;
   }
 }
 /* Активности  */

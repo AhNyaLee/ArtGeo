@@ -78,6 +78,10 @@
     position: absolute;
   }
 
+  &__button{
+    display: none;
+    overflow: hidden;
+  }
   //Медиа запросы
 
   @media (max-width: 1379px) {
@@ -112,10 +116,27 @@
   }
 
   @media (max-width: 1023px) {
+    &__grid {
+      grid-template-columns: auto 1fr;
+      gap: 100px;
+      justify-content: flex-end;
+    }
     &__menu {
-      width: 550px;
-      height: 20px;
-      gap: 20px;
+      display: none;
+      overflow: hidden;
+    }
+
+    &__contacts {
+      width: 349px;
+      height: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 14px;
+    }
+
+    &__button{
+      display: block;
+      overflow: visible;
     }
   }
 
