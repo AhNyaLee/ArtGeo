@@ -232,7 +232,7 @@ input[type=radio].visually-hidden {
 }
 .hero__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.5fr 1fr;
   justify-items: center;
   gap: 60px;
   position: relative;
@@ -256,19 +256,16 @@ input[type=radio].visually-hidden {
   gap: 32px;
   justify-content: flex-start;
 }
-.hero__block-img {
-  height: 865px;
-}
 .hero__block-img img {
-  height: 100%;
+  height: 865px;
   width: 100%;
 }
 @media (max-width: 1279px) {
   .hero__grid {
     gap: 0;
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 9fr 4fr;
   }
-  .hero__block-img {
+  .hero__block-img img {
     height: 658px;
   }
 }
@@ -277,8 +274,10 @@ input[type=radio].visually-hidden {
     grid-template-columns: 1fr;
   }
   .hero__block-img {
-    height: 658px;
     margin-left: 250px;
+  }
+  .hero__block-img img {
+    height: 658px;
   }
 }
 @media (max-width: 767px) {
