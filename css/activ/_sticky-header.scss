@@ -1,0 +1,21 @@
+.header-sticky {
+
+  .header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--white);
+    color: var(--dark);
+
+    &__menu,
+    &__contacts,
+    .header__tel {
+      color: var(--dark);
+    }
+
+    &__grid::after {
+      content: "";
+      height: 0px;
+      opacity: 0.15;
+    }
+  }
+}

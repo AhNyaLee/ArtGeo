@@ -43,6 +43,11 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: var(--orange);
+  transform: scale(1.1);
+}
+
 textarea {
   resize: vertical;
 }
@@ -55,7 +60,8 @@ input[type="number"] {
   font-size: 24px;
   font-weight: initial;
 }
-h1{
+
+h1 {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 64px;
