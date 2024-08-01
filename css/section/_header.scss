@@ -11,30 +11,34 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: right;
-  transition: all 0.3s;
+
 
   &__grid {
-    padding-bottom: 12px;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 120px;
-    justify-items: flex-start;
+    gap: 55px;
+    justify-items: center;
     align-items: center;
     position: relative;
   }
 
   &__logo:hover {
     transform: scale(1.1);
+    transition: all 0.3s;
   }
 
   &__menu {
     display: grid;
-    gap: 50px;
     grid-template-columns: repeat(4, auto);
     color: var(--dark);
     justify-content: center;
-    width: 613px;
-    height: 20px;
+  }
+
+  .menu__equipment,
+  .menu__area,
+  .menu__about,
+  .menu__contacts{
+    padding: 20px 28px;
   }
 
   .menu__equipment:hover,
@@ -42,11 +46,12 @@
   .menu__about:hover,
   .menu__contacts:hover {
     transform: scale(1.1);
+    transition: all 0.3s;
+    color: var(--white);
+    background-color: var(--darkorange);
   }
 
   &__contacts {
-    width: 357px;
-    height: 16px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 30px;
@@ -54,6 +59,7 @@
 
   &__tel:hover {
     transform: scale(1.1);
+    transition: all 0.3s;
   }
 
   &__contacts a span {
@@ -61,9 +67,9 @@
     color: var(--darkorange);
   }
 
-  &__contacts a span:hover {
+  &__contacts a span:hover{
     color: var(--orange);
-    text-decoration: underline;
+    transition: all 0.3s;
   }
 
   &__grid::after {
@@ -81,34 +87,33 @@
   &__button{
     display: none;
     overflow: hidden;
+
+  }
+
+  &__button:hover{
+    background-color: var(--orange);
+    transform: scale(1.1);
+    transition: all 0.3s;
   }
   //Медиа запросы
 
   @media (max-width: 1379px) {
     &__grid {
-      gap: 48px;
-    }
-
-    &__menu {
-      gap: 40px;
+      gap: 0px;
     }
 
   }
 
   @media (max-width: 1279px) {
-    &__grid {
-      gap: 10px;
-    }
 
-    &__menu {
-      width: 550px;
-      height: 20px;
-      gap: 20px;
+    .menu__equipment,
+    .menu__area,
+    .menu__about,
+    .menu__contacts{
+      padding: 20px 15px;
     }
 
     &__contacts {
-      width: 198px;
-      height: 40px;
       grid-template-columns: auto;
       gap: 8px;
     }
@@ -117,9 +122,9 @@
 
   @media (max-width: 1023px) {
     &__grid {
-      grid-template-columns: auto 1fr;
-      gap: 100px;
-      justify-content: flex-end;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      justify-items: flex-end;
     }
     &__menu {
       display: none;
@@ -127,18 +132,31 @@
     }
 
     &__contacts {
-      width: 349px;
-      height: 14px;
       display: grid;
-      grid-template-columns: repeat(3, auto);
+      grid-template-columns: repeat(2, auto);
       gap: 14px;
     }
 
     &__button{
       display: block;
       overflow: visible;
+      border: none;
+      background: none;
+      cursor: pointer;
+      background-color: var(--darkorange);
+      height: 45px;
+      width: 45PX;
     }
   }
 
-  @media (max-width: 767px) {}
+  @media (max-width: 767px) {
+    &__grid {
+      gap:10px;
+    }
+    &__contacts {
+      grid-template-columns: auto;
+      gap: 8px;
+      align-content: center;
+    }
+  }
 }
