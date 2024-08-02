@@ -183,7 +183,13 @@
 
   @media (max-width: 474px) {
     &__contacts {
-      gap: 5px;
+      gap: 0px;
+      margin: 10px;
+    }
+
+    &__grid {
+      gap: 0px;
+
     }
   }
 }

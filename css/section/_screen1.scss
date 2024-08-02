@@ -3,7 +3,7 @@
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  min-height: 900px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -77,9 +77,14 @@
     justify-content: flex-start;
   }
 
+
   &__block-img img {
     height: 865px;
-    width: 100%;
+  }
+
+  &__block-img {
+    z-index: 10;
+    grid-column: 2;
   }
 
 
@@ -110,6 +115,11 @@
     &__block-img img {
       height: 658px;
 
+    }
+
+    &__block-img {
+      grid-column: 1;
+      grid-row: 2;
     }
 
   }

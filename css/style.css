@@ -59,7 +59,6 @@ body {
 
 img {
   height: auto;
-  max-width: 100%;
 }
 
 input,
@@ -146,16 +145,6 @@ input[type=radio].visually-hidden {
     padding: 0 20PX;
   }
 }
-@media (max-width: 767px) {
-  .wrapper {
-    padding: 0 10px;
-  }
-}
-@media (max-width: 474px) {
-  .wrapper {
-    padding: 0 2px;
-  }
-}
 
 .button {
   border: 1px solid var(--line);
@@ -213,7 +202,7 @@ input[type=radio].visually-hidden {
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  min-height: 900px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -280,7 +269,10 @@ input[type=radio].visually-hidden {
 }
 .hero__block-img img {
   height: 865px;
-  width: 100%;
+}
+.hero__block-img {
+  z-index: 10;
+  grid-column: 2;
 }
 @media (max-width: 1279px) {
   .hero__grid {
@@ -300,6 +292,10 @@ input[type=radio].visually-hidden {
   }
   .hero__block-img img {
     height: 658px;
+  }
+  .hero__block-img {
+    grid-column: 1;
+    grid-row: 2;
   }
 }
 @media (max-width: 767px) {
@@ -481,7 +477,11 @@ input[type=radio].visually-hidden {
 }
 @media (max-width: 474px) {
   .header__contacts {
-    gap: 5px;
+    gap: 0px;
+    margin: 10px;
+  }
+  .header__grid {
+    gap: 0px;
   }
 }
 
@@ -526,6 +526,7 @@ input[type=radio].visually-hidden {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 1000;
 }
 
 .nuv__equipment, .nuv__area, .nuv__about, .nuv__contacts {

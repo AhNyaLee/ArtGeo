@@ -28,15 +28,4 @@ input[type="radio"].visually-hidden {
   @media (max-width: 1023px) {
     padding: 0 20PX;
   }
-
-  @media (max-width: 767px) {
-    & {
-      padding: 0 10px;
-    }
-  }
-  @media (max-width: 474px){
-    & {
-      padding: 0 2px;
-    }
-  }
 }
