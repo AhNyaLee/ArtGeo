@@ -20,6 +20,7 @@
     justify-items: center;
     align-items: center;
     position: relative;
+    padding-bottom: 5px;
   }
   &__logo{
     width: 102px;
@@ -160,6 +161,7 @@
 
   @media (max-width: 767px) {
     &__grid {
+
       gap:10px;
     }
     &__logo{

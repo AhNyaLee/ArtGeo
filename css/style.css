@@ -345,6 +345,7 @@ input[type=radio].visually-hidden {
   justify-items: center;
   align-items: center;
   position: relative;
+  padding-bottom: 5px;
 }
 .header__logo {
   width: 102px;
@@ -502,6 +503,7 @@ input[type=radio].visually-hidden {
   padding: 0px 20px;
   font-weight: 700;
   font-size: 45px;
+  text-align: left;
 }
 
 .nuv__equipment,
@@ -553,7 +555,6 @@ input[type=radio].visually-hidden {
 }
 
 .active {
-  display: block;
   overflow: visible;
   position: fixed;
   left: 0;
@@ -573,15 +574,15 @@ input[type=radio].visually-hidden {
     width: 40px;
     height: 40px;
   }
-  .nuv__equipment,
-  .nuv__area,
-  .nuv__about,
-  .nuv__contacts {
-    padding: 10px;
-  }
 }
 @media (max-width: 474px) {
   .header__nuv {
     font-size: 20px;
+  }
+  .nuv__equipment,
+  .nuv__area,
+  .nuv__about,
+  .nuv__contacts {
+    padding: 30px 10px;
   }
 }/*# sourceMappingURL=style.css.map */

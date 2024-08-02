@@ -4,7 +4,7 @@
   padding: 0px 20px;
   font-weight: 700;
   font-size: 45px;
-
+  text-align: left;
 }
 .nuv__equipment,
 .nuv__area,
@@ -51,7 +51,6 @@
   color: var(--darkorange);
 }
 .active {
-  display: block;
   overflow: visible;
   position: fixed;
   left: 0;
@@ -72,17 +71,16 @@
     width: 40px;
     height: 40px;
   }
-  .nuv__equipment,
-.nuv__area,
-.nuv__about,
-.nuv__contacts {
-
-  padding: 10px ;
-
-}
 }
 @media (max-width: 474px){
   .header__nuv {
     font-size: 20px;
     }
+
+    .nuv__equipment,
+.nuv__area,
+.nuv__about,
+.nuv__contacts {
+  padding: 30px 10px;
+}
 }
