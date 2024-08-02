@@ -34,4 +34,9 @@ input[type="radio"].visually-hidden {
       padding: 0 10px;
     }
   }
+  @media (max-width: 474px){
+    & {
+      padding: 0 2px;
+    }
+  }
 }
