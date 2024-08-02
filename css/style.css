@@ -341,6 +341,9 @@ input[type=radio].visually-hidden {
   align-items: center;
   position: relative;
 }
+.header__logo {
+  width: 102px;
+}
 .header__logo:hover {
   transform: scale(1.1);
   transition: all 0.3s;
@@ -419,12 +422,18 @@ input[type=radio].visually-hidden {
     grid-template-columns: auto;
     gap: 8px;
   }
+  .header__logo {
+    width: 136px;
+  }
 }
 @media (max-width: 1023px) {
   .header__grid {
     grid-template-columns: auto 1fr auto;
     gap: 24px;
     justify-items: flex-end;
+  }
+  .header__logo {
+    width: 102px;
   }
   .header__menu {
     display: none;
@@ -450,6 +459,9 @@ input[type=radio].visually-hidden {
   .header__grid {
     gap: 10px;
   }
+  .header__logo {
+    width: 84px;
+  }
   .header__contacts {
     grid-template-columns: auto;
     gap: 8px;
@@ -458,7 +470,7 @@ input[type=radio].visually-hidden {
 }
 @media (max-width: 374px) {
   .header__grid {
-    gap: 0px;
+    gap: 5px;
   }
 }
 
@@ -549,5 +561,15 @@ input[type=radio].visually-hidden {
 @media (max-width: 767px) {
   .header__nuv {
     font-size: 25px;
+  }
+  .nuv__button {
+    width: 40px;
+    height: 40px;
+  }
+  .nuv__equipment,
+  .nuv__area,
+  .nuv__about,
+  .nuv__contacts {
+    padding: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -21,7 +21,9 @@
     align-items: center;
     position: relative;
   }
-
+  &__logo{
+    width: 102px;
+  }
   &__logo:hover {
     transform: scale(1.1);
     transition: all 0.3s;
@@ -102,6 +104,7 @@
       gap: 0px;
     }
 
+
   }
 
   @media (max-width: 1279px) {
@@ -117,7 +120,9 @@
       grid-template-columns: auto;
       gap: 8px;
     }
-
+    &__logo{
+      width: 136px;
+    }
   }
 
   @media (max-width: 1023px) {
@@ -125,6 +130,10 @@
       grid-template-columns: auto 1fr auto;
       gap: 24px;
       justify-items: flex-end;
+    }
+    &__logo{
+      width: 102px;
+
     }
     &__menu {
       display: none;
@@ -153,6 +162,9 @@
     &__grid {
       gap:10px;
     }
+    &__logo{
+      width: 84px;
+    }
     &__contacts {
       grid-template-columns: auto;
       gap: 8px;
@@ -161,7 +173,7 @@
   }
   @media (max-width: 374px) {
     &__grid {
-      gap:0px;
-    }
+      gap: 5px;
+  }
   }
 }
