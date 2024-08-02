@@ -22,9 +22,11 @@
     position: relative;
     padding-bottom: 5px;
   }
-  &__logo{
+
+  &__logo {
     width: 102px;
   }
+
   &__logo:hover {
     transform: scale(1.1);
     transition: all 0.3s;
@@ -40,7 +42,7 @@
   .menu__equipment,
   .menu__area,
   .menu__about,
-  .menu__contacts{
+  .menu__contacts {
     padding: 20px 28px;
   }
 
@@ -70,7 +72,7 @@
     color: var(--darkorange);
   }
 
-  &__contacts a span:hover{
+  &__contacts a span:hover {
     color: var(--orange);
     transition: all 0.3s;
   }
@@ -87,24 +89,25 @@
     position: absolute;
   }
 
-  &__button{
+  &__button {
     display: none;
     overflow: hidden;
 
   }
 
-  &__button:hover{
+  &__button:hover {
     background-color: var(--orange);
     transform: scale(1.1);
     transition: all 0.3s;
   }
+
   //Медиа запросы
 
   @media (max-width: 1379px) {
+
     &__grid {
       gap: 0px;
     }
-
 
   }
 
@@ -113,7 +116,7 @@
     .menu__equipment,
     .menu__area,
     .menu__about,
-    .menu__contacts{
+    .menu__contacts {
       padding: 20px 15px;
     }
 
@@ -121,7 +124,8 @@
       grid-template-columns: auto;
       gap: 8px;
     }
-    &__logo{
+
+    &__logo {
       width: 136px;
     }
   }
@@ -132,10 +136,12 @@
       gap: 24px;
       justify-items: flex-end;
     }
-    &__logo{
+
+    &__logo {
       width: 102px;
 
     }
+
     &__menu {
       display: none;
       overflow: hidden;
@@ -147,7 +153,7 @@
       gap: 14px;
     }
 
-    &__button{
+    &__button {
       display: block;
       overflow: visible;
       border: none;
@@ -161,21 +167,23 @@
 
   @media (max-width: 767px) {
     &__grid {
-
-      gap:10px;
+      gap: 10px;
     }
-    &__logo{
+
+    &__logo {
       width: 84px;
     }
+
     &__contacts {
       grid-template-columns: auto;
       gap: 8px;
       align-content: center;
     }
   }
+
   @media (max-width: 474px) {
-  &__contacts {
-    gap: 5px;
-  }
+    &__contacts {
+      gap: 5px;
+    }
   }
 }

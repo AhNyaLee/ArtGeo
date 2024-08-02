@@ -82,6 +82,11 @@ a:hover {
   transform: scale(1.1);
 }
 
+li {
+  padding: 0;
+  list-style: none;
+}
+
 textarea {
   resize: vertical;
 }
@@ -497,63 +502,6 @@ input[type=radio].visually-hidden {
   opacity: 0.15;
 }
 
-.header__nuv {
-  display: none;
-  overflow: hidden;
-  padding: 0px 20px;
-  font-weight: 700;
-  font-size: 45px;
-  text-align: left;
-}
-
-.nuv__equipment,
-.nuv__area,
-.nuv__about,
-.nuv__contacts {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  padding: 30px 30px;
-  align-items: center;
-}
-
-.nuv__equipment span,
-.nuv__area span,
-.nuv__about span,
-.nuv__contacts span {
-  justify-self: flex-start;
-}
-
-.nuv__equipment:hover,
-.nuv__area:hover,
-.nuv__about:hover,
-.nuv__contacts:hover {
-  transform: scale(1.1);
-  transition: all 0.3s;
-  color: var(--white);
-  background-color: var(--darkorange);
-  width: 100%;
-}
-
-.nuv__equipment:hover .nuv__button svg,
-.nuv__area:hover .nuv__button svg,
-.nuv__about:hover .nuv__button svg,
-.nuv__contacts:hover .nuv__button svg {
-  color: var(--white);
-}
-
-.nuv__button {
-  border: 1px solid var(--line);
-  width: 88px;
-  height: 88px;
-  cursor: pointer;
-  background: content-box;
-  justify-self: flex-end;
-}
-
-.nuv__button svg {
-  color: var(--darkorange);
-}
-
 .active {
   overflow: visible;
   position: fixed;
@@ -566,23 +514,63 @@ input[type=radio].visually-hidden {
   justify-content: center;
 }
 
+.header__nuv {
+  display: none;
+  overflow: hidden;
+  padding: 0px 20px;
+  font-weight: 700;
+  font-size: 45px;
+  text-align: left;
+}
 @media (max-width: 767px) {
   .header__nuv {
+    font-size: 25px;
+  }
+}
+
+.nuv__equipment, .nuv__area, .nuv__about, .nuv__contacts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 30px 0;
+  align-items: center;
+}
+.nuv__equipment span, .nuv__area span, .nuv__about span, .nuv__contacts span {
+  justify-self: flex-start;
+}
+.nuv__equipment:hover, .nuv__area:hover, .nuv__about:hover, .nuv__contacts:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  color: var(--white);
+  background-color: var(--darkorange);
+  width: 100%;
+}
+.nuv__equipment:hover .nuv__button svg, .nuv__area:hover .nuv__button svg, .nuv__about:hover .nuv__button svg, .nuv__contacts:hover .nuv__button svg {
+  color: var(--white);
+}
+.nuv__button {
+  border: 1px solid var(--line);
+  width: 88px;
+  height: 88px;
+  cursor: pointer;
+  background: content-box;
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nuv__equipment:hover .nuv__button, .nuv__area:hover .nuv__button, .nuv__about:hover .nuv__button, .nuv__contacts:hover .nuv__button {
+  border: 1px solid var(--darkorange);
+  transition: all 0.3s;
+}
+.nuv__button svg {
+  color: var(--darkorange);
+}
+@media (max-width: 767px) {
+  .nuv .header__nuv {
     font-size: 25px;
   }
   .nuv__button {
     width: 40px;
     height: 40px;
-  }
-}
-@media (max-width: 474px) {
-  .header__nuv {
-    font-size: 20px;
-  }
-  .nuv__equipment,
-  .nuv__area,
-  .nuv__about,
-  .nuv__contacts {
-    padding: 30px 10px;
   }
 }/*# sourceMappingURL=style.css.map */
