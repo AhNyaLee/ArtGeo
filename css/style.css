@@ -474,9 +474,6 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 474px) {
-  .header__grid {
-    gap: 5px;
-  }
   .header__contacts {
     gap: 5px;
   }
@@ -513,7 +510,7 @@ input[type=radio].visually-hidden {
 .nuv__contacts {
   display: grid;
   grid-template-columns: auto 1fr;
-  padding: 30px;
+  padding: 30px 30px;
   align-items: center;
 }
 
@@ -581,5 +578,10 @@ input[type=radio].visually-hidden {
   .nuv__about,
   .nuv__contacts {
     padding: 10px;
+  }
+}
+@media (max-width: 474px) {
+  .header__nuv {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
