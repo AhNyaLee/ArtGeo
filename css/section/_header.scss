@@ -159,4 +159,9 @@
       align-content: center;
     }
   }
+  @media (max-width: 374px) {
+    &__grid {
+      gap:0px;
+    }
+  }
 }

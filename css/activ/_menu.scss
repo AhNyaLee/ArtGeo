@@ -3,7 +3,7 @@
   overflow: hidden;
   padding: 0px 20px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 45px;
 
 }
 .nuv__equipment,
@@ -61,3 +61,8 @@
   padding-top: 110px;
 }
 
+@media (max-width: 767px) {
+  .header__nuv {
+  font-size: 25px;
+  }
+}

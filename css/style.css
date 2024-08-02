@@ -456,6 +456,11 @@ input[type=radio].visually-hidden {
     align-content: center;
   }
 }
+@media (max-width: 374px) {
+  .header__grid {
+    gap: 0px;
+  }
+}
 
 /* Активности  */
 .header-sticky .header {
@@ -479,7 +484,7 @@ input[type=radio].visually-hidden {
   overflow: hidden;
   padding: 0px 20px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 45px;
 }
 
 .nuv__equipment,
@@ -539,4 +544,10 @@ input[type=radio].visually-hidden {
   height: 100%;
   background-color: var(--white);
   padding-top: 110px;
+}
+
+@media (max-width: 767px) {
+  .header__nuv {
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=style.css.map */
