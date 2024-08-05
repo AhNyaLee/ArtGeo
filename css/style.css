@@ -196,8 +196,7 @@ input[type=radio].visually-hidden {
     font-size: 16px;
   }
 }
-
-.button--arrow {
+.button.button--arrow {
   border: 1px solid var(--line);
   width: 88px;
   height: 88px;
@@ -207,14 +206,16 @@ input[type=radio].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.button--arrow svg {
-  color: var(--darkorange);
+  padding: 0;
 }
 @media (max-width: 767px) {
-  .button--arrow {
+  .button.button--arrow {
     width: 40px;
     height: 40px;
+  }
+  .button.button--arrow svg {
+    width: 10px;
+    height: 20px;
   }
 }
 
@@ -526,12 +527,13 @@ input[type=radio].visually-hidden {
 .header__nuv {
   display: none;
   overflow: hidden;
+  padding: 0px 20px;
   font-weight: 700;
   font-size: 45px;
   text-align: left;
 }
 .header__nuv ul {
-  padding: 30px;
+  padding: 10px;
 }
 @media (max-width: 767px) {
   .header__nuv {
@@ -550,13 +552,12 @@ input[type=radio].visually-hidden {
   flex-direction: column;
   justify-content: center;
   z-index: 1000;
-  padding: 0px 5px;
 }
 
 .nuv__equipment, .nuv__area, .nuv__about, .nuv__contacts {
   display: grid;
   grid-template-columns: auto 1fr;
-  padding: 30px 0px;
+  padding: 30px 0;
   align-items: center;
 }
 .nuv__equipment span, .nuv__area span, .nuv__about span, .nuv__contacts span {
@@ -567,7 +568,6 @@ input[type=radio].visually-hidden {
   transition: all 0.3s;
   color: var(--white);
   background-color: var(--darkorange);
-  width: 100%;
 }
 .nuv__equipment:hover .nuv__button svg, .nuv__area:hover .nuv__button svg, .nuv__about:hover .nuv__button svg, .nuv__contacts:hover .nuv__button svg {
   color: var(--white);
@@ -575,4 +575,10 @@ input[type=radio].visually-hidden {
 .nuv__equipment:hover .nuv__button, .nuv__area:hover .nuv__button, .nuv__about:hover .nuv__button, .nuv__contacts:hover .nuv__button {
   border: 1px solid var(--darkorange);
   transition: all 0.3s;
+  transform: scale(1);
+}
+@media (max-width: 767px) {
+  .nuv .header__nuv {
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -31,7 +31,7 @@
   //Медиа запросы
   @media (max-width: 1279px) {
 
-    &{
+    & {
       height: 64px;
       padding: 23px 20px
     }
@@ -53,34 +53,37 @@
       padding: 15px 40px;
       height: 45px;
     }
+
     span {
       font-size: 16px;
     }
   }
-}
 
-.button--arrow {
-  border: 1px solid var(--line);
-  width: 88px;
-  height: 88px;
-  cursor: pointer;
-  background: content-box;
-  justify-self: flex-end;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &.button--arrow {
+    border: 1px solid var(--line);
+    width: 88px;
+    height: 88px;
+    cursor: pointer;
+    background: content-box;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 
-  & svg {
-    color: var(--darkorange);
-  }
+    //Медиа запросы
 
-  //Медиа запросы
+    @media (max-width: 767px) {
 
-  @media (max-width: 767px) {
+      & {
+        width: 40px;
+        height: 40px;
+      }
 
-    & {
-      width: 40px;
-      height: 40px;
+      & svg {
+        width: 10px;
+        height: 20px;
+      }
     }
   }
 }
