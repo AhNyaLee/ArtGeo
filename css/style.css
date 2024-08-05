@@ -197,6 +197,27 @@ input[type=radio].visually-hidden {
   }
 }
 
+.button--arrow {
+  border: 1px solid var(--line);
+  width: 88px;
+  height: 88px;
+  cursor: pointer;
+  background: content-box;
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button--arrow svg {
+  color: var(--darkorange);
+}
+@media (max-width: 767px) {
+  .button--arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .hero {
   padding-top: 80px;
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
@@ -510,7 +531,7 @@ input[type=radio].visually-hidden {
   text-align: left;
 }
 .header__nuv ul {
-  padding: 10px;
+  padding: 30px;
 }
 @media (max-width: 767px) {
   .header__nuv {
@@ -551,27 +572,7 @@ input[type=radio].visually-hidden {
 .nuv__equipment:hover .nuv__button svg, .nuv__area:hover .nuv__button svg, .nuv__about:hover .nuv__button svg, .nuv__contacts:hover .nuv__button svg {
   color: var(--white);
 }
-.nuv__button {
-  border: 1px solid var(--line);
-  width: 88px;
-  height: 88px;
-  cursor: pointer;
-  background: content-box;
-  justify-self: flex-end;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .nuv__equipment:hover .nuv__button, .nuv__area:hover .nuv__button, .nuv__about:hover .nuv__button, .nuv__contacts:hover .nuv__button {
   border: 1px solid var(--darkorange);
   transition: all 0.3s;
-}
-.nuv__button svg {
-  color: var(--darkorange);
-}
-@media (max-width: 767px) {
-  .nuv__button {
-    width: 40px;
-    height: 40px;
-  }
 }/*# sourceMappingURL=style.css.map */
