@@ -505,10 +505,12 @@ input[type=radio].visually-hidden {
 .header__nuv {
   display: none;
   overflow: hidden;
-  padding: 0px 20px;
   font-weight: 700;
   font-size: 45px;
   text-align: left;
+}
+.header__nuv ul {
+  padding: 10px;
 }
 @media (max-width: 767px) {
   .header__nuv {
@@ -527,12 +529,13 @@ input[type=radio].visually-hidden {
   flex-direction: column;
   justify-content: center;
   z-index: 1000;
+  padding: 0px 5px;
 }
 
 .nuv__equipment, .nuv__area, .nuv__about, .nuv__contacts {
   display: grid;
   grid-template-columns: auto 1fr;
-  padding: 30px 0;
+  padding: 30px 0px;
   align-items: center;
 }
 .nuv__equipment span, .nuv__area span, .nuv__about span, .nuv__contacts span {
@@ -567,9 +570,6 @@ input[type=radio].visually-hidden {
   color: var(--darkorange);
 }
 @media (max-width: 767px) {
-  .nuv .header__nuv {
-    font-size: 25px;
-  }
   .nuv__button {
     width: 40px;
     height: 40px;

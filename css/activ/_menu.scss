@@ -1,11 +1,13 @@
 .header__nuv {
   display: none;
   overflow: hidden;
-  padding: 0px 20px;
   font-weight: 700;
   font-size: 45px;
   text-align: left;
 
+  & ul{
+    padding: 10px;
+  }
   //Медиа запросы
   @media (max-width: 767px) {
     & {
@@ -26,6 +28,7 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1000;
+  padding: 0px 5px;
 }
 
 .nuv {
@@ -36,7 +39,7 @@
   &__contacts {
     display: grid;
     grid-template-columns: auto 1fr;
-    padding: 30px 0;
+    padding: 30px 0px;
     align-items: center;
   }
 
@@ -94,9 +97,6 @@
   //Медиа запросы
 
   @media (max-width: 767px) {
-    .header__nuv {
-      font-size: 25px;
-    }
 
     &__button {
       width: 40px;
