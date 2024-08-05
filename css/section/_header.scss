@@ -9,7 +9,6 @@
   font-size: 13px;
   line-height: 154%;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   text-align: right;
 
 
@@ -50,8 +49,6 @@
   .menu__area:hover,
   .menu__about:hover,
   .menu__contacts:hover {
-    transform: scale(1.1);
-    transition: all 0.3s;
     color: var(--white);
     background-color: var(--darkorange);
   }
@@ -63,7 +60,6 @@
   }
 
   &__tel:hover {
-    transform: scale(1.1);
     transition: all 0.3s;
   }
 
@@ -92,12 +88,24 @@
   &__button {
     display: none;
     overflow: hidden;
-
   }
+
+  &__button span, &__button span::after, &__button span::before {
+    flex-shrink: 0;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background-color: var(--white);
+}
+&__button span::after, &__button span::before {
+  content: "";
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 
   &__button:hover {
     background-color: var(--orange);
-    transform: scale(1.1);
     transition: all 0.3s;
   }
 

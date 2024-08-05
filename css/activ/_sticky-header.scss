@@ -5,7 +5,8 @@
     padding-bottom: 5px;
     background-color: var(--white);
     color: var(--dark);
-
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
     &__menu,
     &__contacts,
     .header__tel {

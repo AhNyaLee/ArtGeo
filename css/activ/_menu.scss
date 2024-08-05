@@ -1,13 +1,12 @@
-.header__nuv {
+.header__nav {
   display: none;
   overflow: hidden;
-  padding: 0px 20px;
   font-weight: 700;
   font-size: 45px;
   text-align: left;
 
   ul{
-    padding:10px;
+    padding: 0;
   }
 
   //Медиа запросы
@@ -30,16 +29,17 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1000;
+
 }
 
-.nuv {
+.nav {
 
   &__equipment,
   &__area,
   &__about,
   &__contacts {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
     padding: 30px 0;
     align-items: center;
   }
@@ -55,7 +55,6 @@
   &__area:hover,
   &__about:hover,
   &__contacts:hover {
-    transform: scale(1.1);
     transition: all 0.3s;
     color: var(--white);
     background-color: var(--darkorange);
@@ -68,20 +67,28 @@
     color: var(--white);
   }
 
-  &__equipment:hover &__button,
-  &__area:hover &__button,
-  &__about:hover &__button,
-  &__contacts:hover &__button {
-    border: 1px solid var(--darkorange);
-    transition: all 0.3s;
-    transform: scale(1);
+  &__equipment,
+  &__area,
+  &__about,
+  &__contacts {
+
+    &:hover,
+    &:active,
+    &:focus {
+      .button {
+        border: 1px solid var(--darkorange);
+      transition: all 0.3s;
+      transform: scale(1);
+      }
+    }
+
   }
 
 
   //Медиа запросы
 
   @media (max-width: 767px) {
-    .header__nuv {
+    .header__nav {
       font-size: 25px;
     }
   }

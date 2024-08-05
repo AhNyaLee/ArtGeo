@@ -78,7 +78,6 @@ a {
 
 a:hover {
   color: var(--orange);
-  transform: scale(1.1);
 }
 
 li {
@@ -220,7 +219,7 @@ input[type=radio].visually-hidden {
 }
 
 .hero {
-  padding-top: 80px;
+  padding-top: 120px;
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
@@ -295,6 +294,9 @@ input[type=radio].visually-hidden {
 .hero__block-img {
   z-index: 10;
   grid-column: 2;
+  display: block;
+  margin: auto;
+  top: -70px;
 }
 @media (max-width: 1279px) {
   .hero__grid {
@@ -321,9 +323,6 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 767px) {
-  .hero__grid {
-    grid-template-rows: repeat(2, 1fr);
-  }
   .hero__container-button {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -358,7 +357,6 @@ input[type=radio].visually-hidden {
   font-size: 13px;
   line-height: 154%;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   text-align: right;
 }
 .header__grid {
@@ -393,8 +391,6 @@ input[type=radio].visually-hidden {
 .header .menu__area:hover,
 .header .menu__about:hover,
 .header .menu__contacts:hover {
-  transform: scale(1.1);
-  transition: all 0.3s;
   color: var(--white);
   background-color: var(--darkorange);
 }
@@ -404,7 +400,6 @@ input[type=radio].visually-hidden {
   gap: 30px;
 }
 .header__tel:hover {
-  transform: scale(1.1);
   transition: all 0.3s;
 }
 .header__contacts a span {
@@ -430,9 +425,20 @@ input[type=radio].visually-hidden {
   display: none;
   overflow: hidden;
 }
+.header__button span, .header__button span::after, .header__button span::before {
+  flex-shrink: 0;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: var(--white);
+}
+.header__button span::after, .header__button span::before {
+  content: "";
+  display: block;
+  transition: 0.3s;
+}
 .header__button:hover {
   background-color: var(--orange);
-  transform: scale(1.1);
   transition: all 0.3s;
 }
 @media (max-width: 1379px) {
@@ -513,6 +519,8 @@ input[type=radio].visually-hidden {
   padding-bottom: 5px;
   background-color: var(--white);
   color: var(--dark);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
 }
 .header-sticky .header__menu, .header-sticky .header__contacts,
 .header-sticky .header .header__tel {
@@ -524,19 +532,18 @@ input[type=radio].visually-hidden {
   opacity: 0.15;
 }
 
-.header__nuv {
+.header__nav {
   display: none;
   overflow: hidden;
-  padding: 0px 20px;
   font-weight: 700;
   font-size: 45px;
   text-align: left;
 }
-.header__nuv ul {
-  padding: 10px;
+.header__nav ul {
+  padding: 0;
 }
 @media (max-width: 767px) {
-  .header__nuv {
+  .header__nav {
     font-size: 25px;
   }
 }
@@ -554,31 +561,30 @@ input[type=radio].visually-hidden {
   z-index: 1000;
 }
 
-.nuv__equipment, .nuv__area, .nuv__about, .nuv__contacts {
+.nav__equipment, .nav__area, .nav__about, .nav__contacts {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   padding: 30px 0;
   align-items: center;
 }
-.nuv__equipment span, .nuv__area span, .nuv__about span, .nuv__contacts span {
+.nav__equipment span, .nav__area span, .nav__about span, .nav__contacts span {
   justify-self: flex-start;
 }
-.nuv__equipment:hover, .nuv__area:hover, .nuv__about:hover, .nuv__contacts:hover {
-  transform: scale(1.1);
+.nav__equipment:hover, .nav__area:hover, .nav__about:hover, .nav__contacts:hover {
   transition: all 0.3s;
   color: var(--white);
   background-color: var(--darkorange);
 }
-.nuv__equipment:hover .nuv__button svg, .nuv__area:hover .nuv__button svg, .nuv__about:hover .nuv__button svg, .nuv__contacts:hover .nuv__button svg {
+.nav__equipment:hover .nav__button svg, .nav__area:hover .nav__button svg, .nav__about:hover .nav__button svg, .nav__contacts:hover .nav__button svg {
   color: var(--white);
 }
-.nuv__equipment:hover .nuv__button, .nuv__area:hover .nuv__button, .nuv__about:hover .nuv__button, .nuv__contacts:hover .nuv__button {
+.nav__equipment:hover .button, .nav__equipment:active .button, .nav__equipment:focus .button, .nav__area:hover .button, .nav__area:active .button, .nav__area:focus .button, .nav__about:hover .button, .nav__about:active .button, .nav__about:focus .button, .nav__contacts:hover .button, .nav__contacts:active .button, .nav__contacts:focus .button {
   border: 1px solid var(--darkorange);
   transition: all 0.3s;
   transform: scale(1);
 }
 @media (max-width: 767px) {
-  .nuv .header__nuv {
+  .nav .header__nav {
     font-size: 25px;
   }
 }/*# sourceMappingURL=style.css.map */

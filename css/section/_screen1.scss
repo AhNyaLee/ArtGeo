@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 80px;
+  padding-top: 120px;
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,6 +85,9 @@
   &__block-img {
     z-index: 10;
     grid-column: 2;
+    display: block;
+    margin: auto;
+    top:-70px;
   }
 
 
@@ -125,10 +128,6 @@
   }
 
   @media (max-width: 767px) {
-
-    &__grid {
-      grid-template-rows: repeat(2, 1fr);
-    }
 
 
     &__container-button {
