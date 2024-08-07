@@ -43,10 +43,16 @@
     top: 10px;
     margin-left: 6px;
   }
+
+  .block__grid ul {
+    padding: 10px 20px;
+  }
+
   .block__grid li {
     position: relative;
     font-size: 16px;
     opacity: 0.7;
+    padding: 0;
   }
 
   .block__grid li::before {
@@ -84,4 +90,23 @@
     line-height: 133%;
     color: var(--dark);
   }
+
+  @media (max-width: 1379px){
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+    .block__flex{
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      gap: 32px;
+    }
+  }
+  @media (max-width: 767px) {
+  .block__grid-ligrip{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
 }
