@@ -145,6 +145,26 @@ input[type=radio].visually-hidden {
   }
 }
 
+.title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--orange);
+}
+
+.container-button {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 32px;
+  justify-content: flex-start;
+}
+@media (max-width: 767px) {
+  .container-button {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
 .button {
   border: 1px solid var(--line);
   padding: 32px 20px;
@@ -156,18 +176,19 @@ input[type=radio].visually-hidden {
   grid-template-columns: repeat(2, auto);
   gap: 10px;
 }
-.button:hover {
-  color: var(--orange);
-  transition: all 0.5s;
-  transform: scale(1.1);
-}
-.button span {
+.button--white span {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   color: var(--dark);
   white-space: nowrap;
+}
+.button--orange {
+  background: var(--darkorange);
+}
+.button--orange span {
+  color: var(--white);
 }
 .button svg {
   justify-self: flex-end;
@@ -230,6 +251,7 @@ input[type=radio].visually-hidden {
   display: block;
   width: 100%;
   height: 100%;
+  margin-bottom: 85px;
 }
 .hero__container-video {
   position: absolute;
@@ -282,12 +304,6 @@ input[type=radio].visually-hidden {
 .hero__block-text h1 {
   margin-bottom: 27px;
 }
-.hero__container-button {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 32px;
-  justify-content: flex-start;
-}
 .hero__block-img img {
   height: 865px;
 }
@@ -323,10 +339,6 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 767px) {
-  .hero__container-button {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
   .hero__grid {
     grid-template-columns: 1fr;
     padding: 0;
@@ -511,6 +523,84 @@ input[type=radio].visually-hidden {
   .header__grid {
     gap: 0px;
   }
+}
+
+.overview {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.overview__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 160px;
+}
+.overview .block__text h2 {
+  font-size: 48px;
+  line-height: 117%;
+  color: var(--dark);
+}
+.overview .block__text p {
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--dark);
+  opacity: 0.7;
+}
+.overview .block__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.overview .block__grid h3 {
+  font-size: 24px;
+  position: relative;
+  display: block;
+}
+.overview .block__grid h3::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: var(--orange);
+  top: 10px;
+  margin-left: 6px;
+}
+.overview .block__grid li {
+  position: relative;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.overview .block__grid li::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: var(--orange);
+  top: 10px;
+  left: -15px;
+}
+.overview .block__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.overview .vantage {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.overview .vantage p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--dark);
+  opacity: 0.7;
+}
+.overview .vantage h3 {
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--dark);
 }
 
 /* Активности  */

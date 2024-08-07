@@ -10,6 +10,8 @@
   display: block;
   width: 100%;
   height: 100%;
+  margin-bottom: 85px;
+
 
   &__container-video {
     position: absolute;
@@ -70,13 +72,6 @@
     margin-bottom: 27px;
   }
 
-  &__container-button {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 32px;
-    justify-content: flex-start;
-  }
-
 
   &__block-img img {
     height: 865px;
@@ -128,13 +123,6 @@
   }
 
   @media (max-width: 767px) {
-
-
-    &__container-button {
-      grid-template-columns: 1fr;
-      gap: 10px;
-
-    }
 
     &__grid {
       grid-template-columns: 1fr;

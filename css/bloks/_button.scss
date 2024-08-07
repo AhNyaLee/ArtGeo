@@ -9,13 +9,7 @@
   grid-template-columns: repeat(2, auto);
   gap: 10px;
 
-  &:hover {
-    color: var(--orange);
-    transition: all 0.5s;
-    transform: scale(1.1);
-  }
-
-  span {
+  &--white span {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -24,6 +18,12 @@
     white-space: nowrap;
   }
 
+  &--orange{
+    background: var(--darkorange);
+  }
+  &--orange span{
+    color: var(--white);
+  }
   svg {
     justify-self: flex-end;
   }
@@ -87,3 +87,4 @@
     }
   }
 }
+
