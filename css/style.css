@@ -181,7 +181,7 @@ input[type=radio].visually-hidden {
   grid-template-columns: repeat(2, auto);
   gap: 10px;
 }
-.button--white span {
+.button span {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
@@ -189,19 +189,13 @@ input[type=radio].visually-hidden {
   color: var(--dark);
   white-space: nowrap;
 }
-.button--orange {
-  background: var(--darkorange);
-}
-.button--orange span {
-  color: var(--white);
-}
 .button svg {
   justify-self: flex-end;
 }
 @media (max-width: 1279px) {
   .button {
     height: 64px;
-    padding: 23px 15px;
+    padding: 23px 20px;
   }
 }
 @media (max-width: 1023px) {
@@ -249,7 +243,6 @@ input[type=radio].visually-hidden {
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 900px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -356,10 +349,12 @@ input[type=radio].visually-hidden {
   .hero h1 {
     font-size: 40px;
   }
-  .hero__block-img {
+  .hero__block-img img {
     height: 420px;
     grid-column: 1;
-    margin: 0;
+  }
+  .hero__block-img {
+    margin-left: 65px;
   }
 }
 
@@ -443,6 +438,7 @@ input[type=radio].visually-hidden {
   overflow: hidden;
 }
 .header__button span, .header__button span::after, .header__button span::before {
+  content: "";
   flex-shrink: 0;
   position: absolute;
   width: 16px;
@@ -505,6 +501,8 @@ input[type=radio].visually-hidden {
     background-color: var(--darkorange);
     height: 45px;
     width: 45PX;
+    position: relative;
+    display: flex;
   }
 }
 @media (max-width: 767px) {

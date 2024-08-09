@@ -3,7 +3,6 @@
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 900px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -82,7 +81,7 @@
     grid-column: 2;
     display: block;
     margin: auto;
-    top:-70px;
+    top: -70px;
   }
 
 
@@ -139,12 +138,14 @@
       font-size: 40px;
     }
 
-    &__block-img {
+    &__block-img img {
       height: 420px;
       grid-column: 1;
-      margin: 0;
+    }
+
+    &__block-img {
+      margin-left: 65px;
     }
   }
-
 
 }
