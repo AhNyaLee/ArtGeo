@@ -151,6 +151,11 @@ input[type=radio].visually-hidden {
   line-height: 150%;
   color: var(--orange);
 }
+@media (max-width: 474px) {
+  .title {
+    font-size: 14px;
+  }
+}
 
 .container-button {
   display: grid;
@@ -536,75 +541,11 @@ input[type=radio].visually-hidden {
   grid-template-columns: 2fr 1fr;
   gap: 160px;
 }
-.overview .block__text h2 {
-  font-size: 48px;
-  line-height: 117%;
-  color: var(--dark);
-}
-.overview .block__text p {
-  font-size: 16px;
-  line-height: 150%;
-  color: var(--dark);
-  opacity: 0.7;
-}
-.overview .block__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-.overview .block__grid h3 {
-  font-size: 24px;
-  position: relative;
-  display: block;
-}
-.overview .block__grid h3::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  background: var(--orange);
-  top: 10px;
-  margin-left: 6px;
-}
-.overview .block__grid ul {
-  padding: 10px 20px;
-}
-.overview .block__grid li {
-  position: relative;
-  font-size: 16px;
-  opacity: 0.7;
-  padding: 0;
-}
-.overview .block__grid li::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  background: var(--orange);
-  top: 10px;
-  left: -15px;
-}
 .overview .block__flex {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.overview .vantage {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.overview .vantage p {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 143%;
-  color: var(--dark);
-  opacity: 0.7;
-}
-.overview .vantage h3 {
-  font-size: 18px;
-  line-height: 133%;
-  color: var(--dark);
+  color: var(--darkorange);
 }
 @media (max-width: 1379px) {
   .overview__grid {
@@ -613,16 +554,144 @@ input[type=radio].visually-hidden {
   }
   .overview .block__flex {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
 }
+@media (max-width: 474px) {
+  .overview .block__flex {
+    grid-template-columns: 1fr;
+    gap: 23PX;
+  }
+}
+
+.block__text h2 {
+  font-size: 48px;
+  line-height: 117%;
+  color: var(--dark);
+}
+.block__text p {
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--dark);
+  opacity: 0.7;
+}
+@media (max-width: 474px) {
+  .block__text h2 {
+    font-size: 30px;
+  }
+}
+
+.block__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.block__grid h3 {
+  font-size: 24px;
+  position: relative;
+  display: block;
+}
+.block__grid h3::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: var(--orange);
+  top: 10px;
+  margin-left: 6px;
+}
+.block__grid ul {
+  padding: 10px 20px;
+  display: block;
+  height: inherit;
+}
+.block__grid-ligrip img {
+  display: block;
+  height: 344px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.block__grid li {
+  position: relative;
+  font-size: 16px;
+  padding: 0;
+}
+.block__grid li::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: var(--orange);
+  top: 10px;
+  left: -15px;
+}
 @media (max-width: 767px) {
-  .overview .block__grid-ligrip {
+  .block__grid-ligrip {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
+}
+@media (max-width: 474px) {
+  .block__grid {
+    grid-template-columns: 1fr;
+  }
+  .block__grid-ligrip img {
+    align-self: center;
+  }
+  .block__grid h3 {
+    font-size: 20px;
+  }
+}
+
+.vantage {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.vantage--reliable:hover, .vantage--save:hover, .vantage--multifunctional:hover, .vantage--radio:hover, .vantage--universal:hover {
+  color: var(--orange);
+  transition: all 0.3s;
+}
+.vantage--reliable:hover .reliable,
+.vantage--reliable:hover .save,
+.vantage--reliable:hover .multifunctional,
+.vantage--reliable:hover .radio,
+.vantage--reliable:hover .universal, .vantage--save:hover .reliable,
+.vantage--save:hover .save,
+.vantage--save:hover .multifunctional,
+.vantage--save:hover .radio,
+.vantage--save:hover .universal, .vantage--multifunctional:hover .reliable,
+.vantage--multifunctional:hover .save,
+.vantage--multifunctional:hover .multifunctional,
+.vantage--multifunctional:hover .radio,
+.vantage--multifunctional:hover .universal, .vantage--radio:hover .reliable,
+.vantage--radio:hover .save,
+.vantage--radio:hover .multifunctional,
+.vantage--radio:hover .radio,
+.vantage--radio:hover .universal, .vantage--universal:hover .reliable,
+.vantage--universal:hover .save,
+.vantage--universal:hover .multifunctional,
+.vantage--universal:hover .radio,
+.vantage--universal:hover .universal {
+  transform: scale(1.1);
+}
+.vantage p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--dark);
+  opacity: 0.7;
+}
+.vantage b {
+  color: var(--dark);
+  font-size: 18px;
+}
+.vantage h3 {
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--dark);
 }
 
 /* Активности  */

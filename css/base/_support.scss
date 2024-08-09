@@ -30,14 +30,21 @@ input[type="radio"].visually-hidden {
   }
 }
 
-.title{
+.title {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
   color: var(--orange);
+
+  @media (max-width: 474px) {
+    & {
+      font-size: 14px;
+    }
+  }
 }
 
-.container-button{
+
+.container-button {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 32px;
@@ -49,5 +56,6 @@ input[type="radio"].visually-hidden {
       gap: 10px;
 
     }
-}
+  }
+
 }
