@@ -94,20 +94,27 @@
   &__button span::after,
   &__button span::before {
     content: "";
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  &__button span,
+  &__button span::after,
+  &__button span::before {
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     position: absolute;
     width: 16px;
-    height: 2px;
+    height: 3px;
     background-color: var(--white);
   }
 
-  &__button span::after,
-  &__button span::before {
-    content: "";
-    display: block;
-    transition: 0.3s;
-  }
-
+  &__button span::before{
+    width: 14px;
+}
+&__button span::after {
+  width: 12px;
+}
   &__button:hover {
     background-color: var(--orange);
     transition: all 0.3s;

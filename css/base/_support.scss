@@ -43,7 +43,19 @@ input[type="radio"].visually-hidden {
   }
 }
 
+.bigtitle{
+  font-size: 48px;
+  line-height: 117%;
+  color: var(--dark);
 
+  @media (max-width: 474px) {
+
+    & {
+      font-size: 30px;
+    }
+  }
+
+}
 .container-button {
   display: grid;
   grid-template-columns: repeat(2, auto);

@@ -9,7 +9,6 @@
   grid-template-columns: repeat(2, auto);
   gap: 10px;
 
-
   span {
     font-family: var(--font-family);
     font-weight: 500;
@@ -52,6 +51,21 @@
     span {
       font-size: 16px;
     }
+  }
+
+  &--white span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  &--orange{
+    background: var(--darkorange);
+    color:var(--white);
+  }
+  &--orange span{
+    color: var(--white);
   }
 
   &.button--arrow {
