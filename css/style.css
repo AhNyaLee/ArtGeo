@@ -514,6 +514,36 @@ input[type=radio].visually-hidden {
     height: 45px;
     width: 45PX;
   }
+  .header__button::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 16px;
+    height: 2px;
+    background-color: white;
+    left: 15px;
+    top: 10px;
+  }
+  .header__button span::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    left: 15px;
+    top: 20px;
+  }
+  .header__button::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: white;
+    left: 15px;
+    top: 30px;
+  }
 }
 @media (max-width: 767px) {
   .header__grid {
