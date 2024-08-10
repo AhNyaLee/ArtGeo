@@ -437,18 +437,6 @@ input[type=radio].visually-hidden {
   display: none;
   overflow: hidden;
 }
-.header__button span, .header__button span::after, .header__button span::before {
-  flex-shrink: 0;
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  background-color: var(--white);
-}
-.header__button span::after, .header__button span::before {
-  content: "";
-  display: block;
-  transition: 0.3s;
-}
 .header__button:hover {
   background-color: var(--orange);
   transition: all 0.3s;
@@ -497,9 +485,40 @@ input[type=radio].visually-hidden {
     border: none;
     background: none;
     cursor: pointer;
+    position: relative;
     background-color: var(--darkorange);
     height: 45px;
     width: 45PX;
+  }
+  .header__button::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 16px;
+    height: 2px;
+    background-color: white;
+    left: 15px;
+    top: 10px;
+  }
+  .header__button span::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    left: 15px;
+    top: 20px;
+  }
+  .header__button::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: white;
+    left: 15px;
+    top: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -616,12 +635,24 @@ input[type=radio].visually-hidden {
     grid-template-columns: repeat(2, 2fr);
     gap: 32px;
   }
+  .overview .block__flex img {
+    height: 344px;
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .overview .block__grid-ligrip {
     display: flex;
     flex-direction: column;
     height: 100%;
+  }
+}
+@media (max-width: 474px) {
+  .overview .block__flex {
+    grid-template-columns: 1fr;
+  }
+  .overview .block__grid {
+    grid-template-columns: 1fr;
   }
 }
 

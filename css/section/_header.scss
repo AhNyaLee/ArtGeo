@@ -90,20 +90,6 @@
     overflow: hidden;
   }
 
-  &__button span, &__button span::after, &__button span::before {
-    flex-shrink: 0;
-    position: absolute;
-    width: 16px;
-    height: 2px;
-    background-color: var(--white);
-}
-&__button span::after, &__button span::before {
-  content: "";
-  display: block;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
   &__button:hover {
     background-color: var(--orange);
     transition: all 0.3s;
@@ -167,10 +153,43 @@
       border: none;
       background: none;
       cursor: pointer;
+      position: relative;
       background-color: var(--darkorange);
       height: 45px;
       width: 45PX;
     }
+    &__button::before{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 16px;
+      height: 2px;
+      background-color: white;
+      left: 15px;
+      top: 10px;
+    }
+
+    &__button span::after {
+      position: absolute;
+      z-index: 2;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      left: 15px;
+      top: 20px;
+  }
+
+  &__button::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: white;
+    left: 15px;
+    top: 30px;
+}
   }
 
   @media (max-width: 767px) {

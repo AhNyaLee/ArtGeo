@@ -101,12 +101,26 @@
       grid-template-columns: repeat(2, 2fr);
       gap: 32px;
     }
+    .block__flex img{
+      height: 344px;
+      width: 100%;
+    }
   }
   @media (max-width: 767px) {
   .block__grid-ligrip{
     display: flex;
     flex-direction: column;
     height: 100%;
+  }
+
+}
+@media (max-width: 474px){
+  .block__flex{
+
+    grid-template-columns:  1fr;
+  }
+  .block__grid {
+    grid-template-columns: 1fr;
   }
 }
 }
