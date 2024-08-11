@@ -188,6 +188,9 @@
     }
   }
   @media (max-width: 767px) {
+    &{
+      margin-bottom: 0;
+    }
   .block__grid-ligrip{
     display: flex;
     flex-direction: column;

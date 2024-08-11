@@ -76,10 +76,6 @@ a {
   color: inherit;
 }
 
-a:hover {
-  color: var(--orange);
-}
-
 li {
   padding: 0;
   list-style: none;
@@ -190,6 +186,9 @@ input[type=radio].visually-hidden {
   color: var(--dark);
   padding: 13px 24px;
 }
+.form__input:hover {
+  border: 1px solid var(--orange);
+}
 .form__main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -206,9 +205,10 @@ input[type=radio].visually-hidden {
 }
 .form .checkbox {
   border: 1px solid var(--line);
-  width: 32px;
-  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   background: var(--white);
+  cursor: pointer;
 }
 .form__label {
   font-weight: 400;
@@ -786,6 +786,9 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 767px) {
+  .vantage {
+    margin-bottom: 0;
+  }
   .vantage .block__grid-ligrip {
     display: flex;
     flex-direction: column;
@@ -806,6 +809,7 @@ input[type=radio].visually-hidden {
   display: block;
   width: 100%;
   height: 100%;
+  margin-bottom: 80px;
 }
 .magazine__grid {
   display: grid;
@@ -838,6 +842,66 @@ input[type=radio].visually-hidden {
     gap: 0px;
   }
   .magazine__imge img {
+    width: 335px;
+  }
+}
+
+.use {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 80px;
+  background-color: var(--dark);
+  padding-bottom: 99px;
+  padding-top: 78px;
+}
+.use .bigtitle {
+  color: var(--white);
+}
+.use__photo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.use__photo img {
+  width: 352px;
+}
+.use__photo span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--white);
+}
+.use__photo span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--orange);
+}
+@media (max-width: 1279px) {
+  .use__photo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .use__photo img {
+    width: 288px;
+  }
+}
+@media (max-width: 1023px) {
+  .use__photo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .use__photo img {
+    width: 328px;
+  }
+}
+@media (max-width: 767px) {
+  .use__photo {
+    grid-template-columns: 1fr;
+  }
+  .use__photo img {
     width: 335px;
   }
 }
