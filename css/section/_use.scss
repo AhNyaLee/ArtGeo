@@ -12,6 +12,10 @@
     color: var(--white);
   }
 
+  ul{
+padding: 0;
+  }
+
   &__photo {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

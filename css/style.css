@@ -864,6 +864,9 @@ input[type=radio].visually-hidden {
 .use .bigtitle {
   color: var(--white);
 }
+.use ul {
+  padding: 0;
+}
 .use__photo {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
