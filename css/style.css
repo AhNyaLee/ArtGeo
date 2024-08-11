@@ -94,12 +94,12 @@ input[type=number] {
 }
 
 ::-moz-placeholder {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: initial;
 }
 
 ::placeholder {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: initial;
 }
 
@@ -178,6 +178,54 @@ input[type=radio].visually-hidden {
   .container-button {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+}
+
+.form {
+  display: grid;
+  gap: 32px;
+}
+.form__input {
+  border: 1px solid var(--line);
+  color: var(--dark);
+  padding: 13px 24px;
+}
+.form__main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.form__check {
+  display: flex;
+  gap: 16px;
+}
+.form .checkbox {
+  border: 1px solid var(--line);
+  width: 32px;
+  height: 32px;
+  background: var(--white);
+}
+.form__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--dark);
+}
+@media (max-width: 767px) {
+  .form {
+    gap: 20px;
+  }
+  .form__main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .form__footer {
+    gap: 20px;
   }
 }
 
@@ -768,6 +816,30 @@ input[type=radio].visually-hidden {
   font-size: 14px;
   line-height: 143%;
   color: var(--dark);
+}
+@media (max-width: 1279px) {
+  .magazine__grid {
+    grid-template-columns: 1fr;
+  }
+  .magazine__imge {
+    grid-row: 1;
+  }
+  .magazine__imge img {
+    width: 928px;
+  }
+}
+@media (max-width: 1023px) {
+  .magazine__imge img {
+    width: 688px;
+  }
+}
+@media (max-width: 767px) {
+  .magazine__grid {
+    gap: 0px;
+  }
+  .magazine__imge img {
+    width: 335px;
+  }
 }
 
 /* Активности  */

@@ -43,7 +43,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-.bigtitle{
+.bigtitle {
   font-size: 48px;
   line-height: 117%;
   color: var(--dark);
@@ -56,6 +56,7 @@ input[type="radio"].visually-hidden {
   }
 
 }
+
 .container-button {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -70,4 +71,62 @@ input[type="radio"].visually-hidden {
     }
   }
 
+}
+
+.form {
+  display: grid;
+  gap: 32px;
+
+  &__input {
+    border: 1px solid var(--line);
+
+    color: var(--dark);
+    padding: 13px 24px;
+
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__check {
+    display: flex;
+    gap: 16px;
+  }
+
+  .checkbox {
+    border: 1px solid var(--line);
+    width: 32px;
+    height: 32px;
+    background: var(--white);
+  }
+
+  &__label{
+    font-weight: 400;
+font-size: 14px;
+line-height: 143%;
+color: var(--dark);
+  }
+
+  @media (max-width: 767px) {
+    &{
+      gap:20px;
+    }
+    &__main {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    &__footer {
+      gap: 20px;
+    }
+
+  }
 }
