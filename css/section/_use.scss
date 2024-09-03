@@ -12,14 +12,15 @@
     color: var(--white);
   }
 
-  ul{
-padding: 0;
+  ul {
+    padding: 0;
   }
 
   &__photo {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
+
   }
 
   &__photo img {
@@ -36,7 +37,7 @@ padding: 0;
     text-wrap: wrap;
   }
 
-  &__photo p::after {
+  &__item p::after {
     content: "";
     position: absolute;
     display: block;
@@ -45,9 +46,19 @@ padding: 0;
     background: var(--orange);
   }
 
-  &__photo:hover &__photo p::after {
-    width: 20px;
+  &__item:hover {
+    img{
+      transform: scale(1.1);
+      transition: all 0.3s;
+    }
+
+     p::after{
+      width: 24px;
+      transition: all 0.3s;
+    }
+
   }
+
 
   //Медиа запросы
 

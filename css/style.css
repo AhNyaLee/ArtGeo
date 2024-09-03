@@ -885,7 +885,7 @@ input[type=radio].visually-hidden {
   color: var(--white);
   text-wrap: wrap;
 }
-.use__photo p::after {
+.use__item p::after {
   content: "";
   position: absolute;
   display: block;
@@ -893,8 +893,13 @@ input[type=radio].visually-hidden {
   height: 2px;
   background: var(--orange);
 }
-.use__photo:hover .use__photo p::after {
-  width: 20px;
+.use__item:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+.use__item:hover p::after {
+  width: 24px;
+  transition: all 0.3s;
 }
 @media (max-width: 1380px) {
   .use__photo {
@@ -932,6 +937,10 @@ input[type=radio].visually-hidden {
   height: 100%;
   margin-bottom: 80px;
   margin-top: 120px;
+}
+.choice__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 .choice__text p {
   font-weight: 400;
