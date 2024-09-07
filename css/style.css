@@ -940,7 +940,8 @@ input[type=radio].visually-hidden {
 }
 .choice__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 150px;
 }
 .choice__text p {
   font-weight: 400;
@@ -948,7 +949,41 @@ input[type=radio].visually-hidden {
   line-height: 150%;
   color: var(--dark);
 }
-
+.choice .block__compani {
+  margin-top: 140px;
+}
+.choice .compani__block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.choice .compani__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 14px;
+}
+.choice .compani__name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  color: var(--dark);
+  margin: 0;
+}
+.choice .compani__city {
+  font-weight: 400;
+  color: #616160;
+  margin: 0;
+}
+.choice .icon {
+  color: var(--darkorange);
+}
+.choice .icon__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--dark);
+}
 /* Активности  */
 .header-sticky .header {
   padding-top: 5px;
