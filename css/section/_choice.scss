@@ -34,6 +34,7 @@
     flex-direction: column;
     gap: 15px;
     font-size: 14px;
+    cursor: pointer;
   }
 
   .compani__name {
@@ -52,6 +53,13 @@
 
   .icon{
     color: var(--darkorange);
+    cursor: pointer;
+  }
+
+  .icon--support,
+  .icon--decision,
+  .icon--equipment{
+    width: 40px;
   }
 
   .icon__text{
@@ -60,8 +68,55 @@
     line-height: 125%;
     color: var(--dark)
   }
-  .icon--support:hover{
+  .why-choice--support:hover .icon--support,
+  .why-choice--decision:hover .icon--decision,
+  .why-choice--equipment:hover .icon--equipment{
+    color: var(--orange);
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
+
+  .compani__item:hover.compani__item img {
+    transform: scale(1.1);
+    transition: all 0.3s;
+    box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  //Медиа запросы
+
+
+  @media (max-width: 1279px) {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .block__compani {
+      margin-top: 0px;
+    }
+
+    .compani__block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
 
   }
 
+  @media (max-width: 1023px) {
+
+    .compani__block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 767px){
+    .compani__block {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
 }

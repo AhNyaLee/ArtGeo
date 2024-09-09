@@ -962,6 +962,7 @@ input[type=radio].visually-hidden {
   flex-direction: column;
   gap: 15px;
   font-size: 14px;
+  cursor: pointer;
 }
 .choice .compani__name {
   font-weight: 700;
@@ -977,6 +978,12 @@ input[type=radio].visually-hidden {
 }
 .choice .icon {
   color: var(--darkorange);
+  cursor: pointer;
+}
+.choice .icon--support,
+.choice .icon--decision,
+.choice .icon--equipment {
+  width: 40px;
 }
 .choice .icon__text {
   font-weight: 500;
@@ -984,6 +991,47 @@ input[type=radio].visually-hidden {
   line-height: 125%;
   color: var(--dark);
 }
+.choice .why-choice--support:hover .icon--support,
+.choice .why-choice--decision:hover .icon--decision,
+.choice .why-choice--equipment:hover .icon--equipment {
+  color: var(--orange);
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+.choice .compani__item:hover.compani__item img {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1279px) {
+  .choice__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .choice .block__compani {
+    margin-top: 0px;
+  }
+  .choice .compani__block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 1023px) {
+  .choice .compani__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .choice .compani__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
 /* Активности  */
 .header-sticky .header {
   padding-top: 5px;
