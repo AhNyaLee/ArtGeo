@@ -9,11 +9,15 @@ button.addEventListener('click', () => {
     menu.classList.add('active');
     img.style.zIndex = 1;
     flag = 1;
+    let img1 = document.querySelector('.hero__block-img');
+    img1.style.zIndex = 1;
   }
   else {
     menu.classList.remove('active');
     img.style.zIndex = 10;
     flag = 0;
+    let img1 = document.querySelector('.hero__block-img');
+    img1.style.zIndex = 11;
   }
 });
 
